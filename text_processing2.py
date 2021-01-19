@@ -89,6 +89,8 @@ def to_camel_case(underscore_str):
     temp_str = underscore_str.replace('_',' ').strip().split()
     if len(temp_str) == 0:
         camelcase_str = ""
+    elif len(temp_str) == 1:
+        camelcase_str = temp_str[0]
     else:
         camelcase_str = temp_str[0].lower()
     for i in range(1,len(temp_str)):
